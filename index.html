@@ -4,6 +4,72 @@
       <title>Batangas State University - The National Engineering University</title>
     </head>
     <body>
+      <!DOCTYPE html>
+<html>
+<head>
+    <title>My Dropdown Box</title>
+    <style>
+        /* Base box layout adjustments */
+        * { box-sizing: border-box; }
+
+        /* The Title header that acts as the button */
+        #dropdown-header {
+            background-color: #333333; 
+            color: #ffffff; 
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px; 
+            margin: 0;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            user-select: none; /* Prevents text highlighting when clicked */
+        }
+
+        /* The empty content box container */
+        #dropdown-content {
+            height: 0px;               /* Starts completely closed */
+            overflow: hidden;          /* Hides any elements placed inside when closed */
+            background-color: #f9f9f9; 
+            border: 2px solid #333333;
+            border-top: none;          /* Connects cleanly to the header */
+            border-radius: 0 0 8px 8px;
+            transition: height 0.4s ease-in-out; /* Smooth sliding animation */
+        }
+        
+        /* The state when the dropdown is clicked open */
+        #dropdown-content.open {
+            height: 300px;             /* The expanded height of your custom container */
+            padding: 20px;             /* Cushion space for your future elements */
+            overflow-y: auto;          /* Adds an internal scrollbar if your future content is huge */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Clickable Header Trigger -->
+    <div id="dropdown-header">Click Me to Toggle Dropdown</div>
+
+    <!-- Empty Box Container (Put whatever you want inside here later!) -->
+    <div id="dropdown-content">
+        
+    </div>
+
+    <!-- Logic to open and close the box -->
+    <script>
+        var header = document.getElementById('dropdown-header');
+        var content = document.getElementById('dropdown-content');
+
+        header.onclick = function() {
+            // Toggles the class .open on and off every time you click
+            content.classList.toggle('open');
+        };
+    </script>
+
+</body>
+</html>
+
       <h1> Welcome to Our Website!</h1>
       <p> Our team: <br> Decipeda, Justin B. <br> Durano, Maria Jiezel <br> Monteclaro, Kyrk Patrick V.</p>
     </body>
